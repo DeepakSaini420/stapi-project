@@ -34,11 +34,18 @@
     },
     "categories": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "products"
     },
     "uid": {
       "type": "uid"
+    },
+    "rivews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rivew.rivew",
+      "mappedBy": "product"
     }
   }
 }

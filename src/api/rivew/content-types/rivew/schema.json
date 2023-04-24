@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rivews",
+  "info": {
+    "singularName": "rivew",
+    "pluralName": "rivews",
+    "displayName": "review",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "review": {
+      "type": "text"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "rivews"
+    }
+  }
+}
